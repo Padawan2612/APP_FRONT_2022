@@ -1,17 +1,16 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root' 
+  providedIn: 'root'
 })
-//clase:metodos,atributos o propiedades,constructor
-export class ProductsService {
+export class SchoolPeriodService {
 
-  HOST=`${environment.HOST}/products`;
+  HOST=`${environment.HOST}/School-Period`;
 
-  constructor( private httpClient:HttpClient) {  }
+  constructor(private httpClient:HttpClient) { }
 
   findAll():Observable<any>{
     return this.httpClient.get(this.HOST)
