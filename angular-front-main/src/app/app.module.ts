@@ -4,13 +4,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CareersComponent } from './careers/careers.component';
 import { ProductsComponent } from './products/products.component';
 import { SchoolPeriodsComponent } from './school-periods/school-periods.component';
+import { StudentsComponent } from './students/students.component';
 @NgModule({
   declarations: [
     AppComponent,
        ProductsComponent,
-       SchoolPeriodsComponent
+       SchoolPeriodsComponent,
+       CareersComponent,
+       StudentsComponent
   ],
   imports: [
     BrowserModule,
