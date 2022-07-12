@@ -4,12 +4,11 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root' 
+  providedIn: 'root'
 })
-//clase:metodos,atributos o propiedades,constructor
-export class ProductsService {
+export class InstitutionalTutorsService {
 
-  HOST=`${environment.HOST}/products`;
+  HOST=`${environment.HOST}/institutionalTutors`;
 
   constructor( private httpClient:HttpClient) {  }
 
@@ -35,5 +34,4 @@ delete(id:number):Observable<any>{
   const url=`${this.HOST}/${id}`;
   return this.httpClient.delete(url);
 }
-
 }

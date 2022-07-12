@@ -4,12 +4,12 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root' 
+  providedIn: 'root'
 })
 //clase:metodos,atributos o propiedades,constructor
-export class ProductsService {
+export class StudentAssignmentsService {
 
-  HOST=`${environment.HOST}/products`;
+  HOST=`${environment.HOST}/studentAssignments`;
 
   constructor( private httpClient:HttpClient) {  }
 
