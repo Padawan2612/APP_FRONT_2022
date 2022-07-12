@@ -9,7 +9,9 @@ import { CareersService } from '../services/careers.service';
 export class CareersComponent implements OnInit {
   constructor(private careersService: CareersService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.findAll()
+  }
   //
 
   findAll() {

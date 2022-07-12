@@ -1,9 +1,9 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
-@Entity()
+@Entity("student")
 export class Student {
   @PrimaryColumn()
   id: number;
-  @Column()
+  @Column("varchar",{name:"name"})
   name: string;
   @Column()
   phone: number;

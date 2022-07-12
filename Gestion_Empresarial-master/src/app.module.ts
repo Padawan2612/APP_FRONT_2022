@@ -23,9 +23,24 @@ import { CareerController } from './carrers_module/career_controller/career.cont
 import { InstitutionalTutorService } from './institutional-tutors/services/institutional-tutor.service';
 import { CareerService } from './carrers_module/service/career/career.service';
 import { StudentsModule } from './students/students.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [BusinessTutorModule, StudentsModule],
+  imports:[
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: '1234',
+      database: 'Angular_DB',
+      synchronize: true,
+      autoLoadEntities: true,
+    }),
+    BusinessTutorModule,
+    StudentsModule,
+  ],
+  //imports: [BusinessTutorModule, StudentsModule],
   controllers: [
     AppController,
     CategoriesController,
