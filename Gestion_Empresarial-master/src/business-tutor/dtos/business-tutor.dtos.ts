@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 import {IsString,IsNumber} from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateBusinessTutordDto{
     @IsNumber()
-    readonly identification_card: number;
+    readonly identificationCard: number;
     @IsString()
     readonly name: string;
     @IsString()
@@ -11,9 +12,9 @@ export class CreateBusinessTutordDto{
     @IsString()
     readonly address: string;
     @IsString()
-    readonly institutional_mail: string;
+    readonly institutionalMail: string;
     @IsString()
-    readonly personal_mail: string;
+    readonly personalMail: string;
     @IsNumber()
     readonly telephone: number;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { BusinessTutor } from 'src/business-tutor/entities/businessTutor.entity';
 import { CreateBusinessTutordDto, UpdateBusinessTutorDto } from 'src/business-tutor/dtos/business-tutor.dtos';
@@ -9,12 +10,12 @@ export class BusinessTutorService {
     private businessTutors: BusinessTutor[] = [
         {
             id: 1,
-            identification_card: 55554547,
+            identificationCard: 55554547,
             name: 'Juan',
             surname: 'Perez',
             address: 'La Ecuatoriana',
-            institutional_mail: 'juanperez@yavirac.edu.ec',
-            personal_mail: 'juanperez@gmail.com',
+            institutionalMail: 'juanperez@yavirac.edu.ec',
+            personalMail: 'juanperez@gmail.com',
             telephone: 498956554,
 
         },
