@@ -11,6 +11,7 @@ export class BusinessTutorComponent implements OnInit {
   constructor(private business_tutorService:BusinessTutorService) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
   //
 
