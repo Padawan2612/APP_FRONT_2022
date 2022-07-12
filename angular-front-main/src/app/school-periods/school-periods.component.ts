@@ -11,6 +11,7 @@ export class SchoolPeriodsComponent implements OnInit {
   constructor(private schoolPeriodsService:SchoolPeriodService ) { }
 
   ngOnInit(): void {
+    this.findAll()
   }
   findAll(){
     this.schoolPeriodsService.findAll().subscribe(response=> {

@@ -16,7 +16,7 @@ import { CreateStudentdDto } from 'src/students/dtos/student.dtos';
 import { UpdateStudentDto } from 'src/students/dtos/student.dtos';
 import { StudentService } from 'src/students/service/student.service';
 
-@Controller('student')
+@Controller('students')
 export class StudentController {
   constructor(private studentService: StudentService) {}
 

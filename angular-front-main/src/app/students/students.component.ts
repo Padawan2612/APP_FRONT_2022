@@ -8,7 +8,7 @@ import { StudentsService } from '../services/students.service';
 export class StudentsComponent implements OnInit {
   constructor(private studentsService: StudentsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {this.findAll()}
   //
 
   findAll() {

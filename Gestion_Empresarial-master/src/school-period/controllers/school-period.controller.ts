@@ -15,7 +15,7 @@ import { CreateSchoolPeriodDto } from 'src/school-period/dtos/school-periods.dto
 import { UpdateSchoolPeriodDto } from 'src/school-period/dtos/school-periods.dtos';
 import { SchoolPeriodService } from '../service/school-period.service';
 
-@Controller('schoolPeriods')
+@Controller('schoolperiods')
 export class SchoolPeriodController {
   constructor(private schoolPeriodService: SchoolPeriodService) {}
 

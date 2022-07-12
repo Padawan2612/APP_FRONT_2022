@@ -4,35 +4,33 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SchoolPeriodService {
+  HOST = `${environment.HOST}/schoolperiods`;
 
-  HOST=`${environment.HOST}/School-Period`;
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient:HttpClient) { }
-
-  findAll():Observable<any>{
-    return this.httpClient.get(this.HOST)
+  findAll(): Observable<any> {
+    return this.httpClient.get(this.HOST);
   }
 
-  findOne(id:number):Observable<any>{
-   return this.httpClient.get(`${this.HOST}/${id}`)
+  findOne(id: number): Observable<any> {
+    return this.httpClient.get(`${this.HOST}/${id}`);
   }
 
-create (payload:any):Observable<any>{
-  const url=`${this.HOST}`;
-  return this.httpClient.post(url,payload);
-}
+  create(payload: any): Observable<any> {
+    const url = `${this.HOST}`;
+    return this.httpClient.post(url, payload);
+  }
 
-update(id:number,payload:any):Observable<any>{
-  const url=`${this.HOST}/${id}`;
-  return this.httpClient.put(url,payload);
-}
+  update(id: number, payload: any): Observable<any> {
+    const url = `${this.HOST}/${id}`;
+    return this.httpClient.put(url, payload);
+  }
 
-delete(id:number):Observable<any>{
-  const url=`${this.HOST}/${id}`;
-  return this.httpClient.delete(url);
-}
-
+  delete(id: number): Observable<any> {
+    const url = `${this.HOST}/${id}`;
+    return this.httpClient.delete(url);
+  }
 }
